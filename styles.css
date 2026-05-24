@@ -42,15 +42,14 @@ button { font-family: inherit; cursor: pointer; }
   display: flex; align-items: center; gap: 28px;
   padding: 14px 22px;
 }
-.brand { display: flex; align-items: center; gap: 12px; }
-.brand__mark {
-  width: 42px; height: 42px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
-  color: var(--orange);
-  font-weight: 900; font-size: 22px;
-  display: grid; place-items: center;
+.brand { display: flex; align-items: center; }
+.brand__name strong {
+  display: block;
+  font-size: 19px;
+  letter-spacing: 1.5px;
+  color: var(--navy);
+  font-weight: 900;
 }
-.brand__name strong { display: block; font-size: 17px; letter-spacing: 1px; }
 .brand__name small { color: var(--muted); font-size: 11px; letter-spacing: 1px; }
 
 .nav__links { display: flex; gap: 24px; margin-left: auto; }
