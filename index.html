@@ -29,7 +29,7 @@
     <nav class="nav__links">
       <a href="#services">服務內容</a>
       <a href="#process">報價流程</a>
-      <a href="#gallery">工程實績</a>
+      <a href="#" data-nav="gallery">工程實績</a>
       <a href="#contact">聯絡我們</a>
     </nav>
     <a class="nav__cta" href="tel:0935445671">
@@ -45,20 +45,43 @@
   <section class="hero">
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="hero__overlay" aria-hidden="true"></div>
-    <div class="hero__content">
-      <p class="hero__eyebrow">水電 · 建築 · 維修</p>
-      <h1 class="hero__title">朝億水電工程行</h1>
-      <p class="hero__sub">有需要請打電話，或寄信給我們。</p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="tel:0935445671">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
-          打電話問　0935-445-671
-        </a>
-        <a class="btn btn--ghost" href="mailto:r96772905@gmail.com">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5Z"/></svg>
-          寫信問　r96772905@gmail.com
-        </a>
+    <div class="hero__inner">
+      <div class="hero__content">
+        <p class="hero__eyebrow">水電 · 建築 · 維修</p>
+        <h1 class="hero__title">朝億水電工程行</h1>
+        <p class="hero__sub">有需要請打電話，或寄信給我們。</p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="tel:0935445671">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
+            打電話問 (吳先生)　0935-445-671
+          </a>
+          <a class="btn btn--ghost" href="mailto:r96772905@gmail.com">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5Z"/></svg>
+            寫信問　r96772905@gmail.com
+          </a>
+        </div>
       </div>
+
+      <aside class="hero__area" aria-label="服務範圍">
+        <header class="hero__area__head">
+          <span class="hero__area__eyebrow">SERVICE AREA</span>
+          <h3>服務範圍</h3>
+        </header>
+        <div class="hero__area__map">
+          <img src="assets/images/map/tainan.jpeg" alt="台南服務範圍地圖" loading="lazy" />
+        </div>
+        <p class="hero__area__caption">主要服務區域 · 台南市</p>
+        <ul class="hero__area__districts">
+          <li>中西區</li>
+          <li>東區</li>
+          <li>南區</li>
+          <li>北區</li>
+          <li>安平區</li>
+          <li>安南區</li>
+          <li>永康區</li>
+          <li>歸仁區</li>
+        </ul>
+      </aside>
     </div>
   </section>
 
@@ -72,37 +95,39 @@
       </header>
 
       <div class="services">
-        <article class="card">
-          <div class="card__icon" style="--c:#0b2545">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 8v8l8 6 8-6V8l-8-6Zm0 2.3 6 4.5v6.4l-6 4.5-6-4.5V8.8l6-4.5Z"/><path d="M9 11h6v2H9z"/></svg>
+        <article class="card" data-service-key="emergency" role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="card__icon" style="--c:#c9302c">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
           </div>
-          <h3>建築工程</h3>
-          <p>新建工程、結構施工，從藍圖到完工。</p>
+          <h3>居家水電急修</h3>
+          <p>跳電、漏水、燈具更換等日常急修，到府快速處理。</p>
+          <span class="card__more">查看詳細項目 →</span>
         </article>
 
-        <article class="card">
+        <article class="card" data-service-key="bathroom" role="button" tabindex="0" aria-haspopup="dialog">
           <div class="card__icon" style="--c:#1a73a7">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-3 4-6 7.5-6 11.5a6 6 0 0 0 12 0C18 9.5 15 6 12 2Zm0 16a4.5 4.5 0 0 1-4.5-4.5c0-2.4 1.8-4.9 4.5-8.1 2.7 3.2 4.5 5.7 4.5 8.1A4.5 4.5 0 0 1 12 18Z"/></svg>
           </div>
-          <h3>水電工程</h3>
-          <p>住家、商辦、廠房給排水與強弱電配線。</p>
+          <h3>衛浴設備汰換</h3>
+          <p>馬桶、面盆、熱水器安裝與浴室防水翻新。</p>
+          <span class="card__more">查看詳細項目 →</span>
         </article>
 
-        <article class="card">
-          <div class="card__icon" style="--c:#f4a261">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+        <article class="card" data-service-key="renovation" role="button" tabindex="0" aria-haspopup="dialog">
+          <div class="card__icon" style="--c:#0b2545">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 8v8l8 6 8-6V8l-8-6Zm0 2.3 6 4.5v6.4l-6 4.5-6-4.5V8.8l6-4.5Z"/><path d="M9 11h6v2H9z"/></svg>
           </div>
-          <h3>水電維修</h3>
-          <p>漏水、跳電、堵塞、開關插座更換。</p>
+          <h3>裝修統包工程</h3>
+          <p>舊屋翻修、大樓管線更新、新建案水電承包。</p>
+          <span class="card__more">查看詳細項目 →</span>
         </article>
+      </div>
 
-        <article class="card">
-          <div class="card__icon" style="--c:#c9302c">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-4V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v2H2v2h2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9h2V7ZM8 5h8v2H8V5Zm10 16H6V9h12v12Z"/><path d="M9 11h2v8H9zM13 11h2v8h-2z"/></svg>
-          </div>
-          <h3>建築維修</h3>
-          <p>既有建築修繕、衛浴翻新。</p>
-        </article>
+      <div class="services__cta">
+        <button class="btn btn--primary btn--lg" id="openGalleryBtn" type="button" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm11 0h7v7h-7v-7z"/></svg>
+          查看工程實績
+        </button>
       </div>
     </div>
   </section>
@@ -116,54 +141,25 @@
         <p class="section__sub">流程簡單　·　一通電話就開始</p>
       </header>
 
-      <ol class="process">
-        <li>
-          <div class="process__num">01</div>
-          <h3>接電話</h3>
-          <p>您撥打 <a href="tel:0935445671">0935-445-671</a> 或寄信給我們。</p>
-        </li>
-        <li>
-          <div class="process__num">02</div>
-          <h3>問問題</h3>
-          <p>說明狀況或寄照片過來，了解您的需求。</p>
-        </li>
-        <li>
-          <div class="process__num">03</div>
-          <h3>報價／約現場</h3>
-          <p>簡單問題電話報價，較複雜的工程約時間到現場看。</p>
-        </li>
-        <li>
-          <div class="process__num">04</div>
-          <h3>維修</h3>
-          <p>確認後安排時間施工，做到讓您安心。</p>
-        </li>
-        <li>
-          <div class="process__num">05</div>
-          <h3>收款</h3>
-          <p>完工驗收沒問題，再行付款。</p>
-        </li>
-      </ol>
+      <div class="process-flow">
+        <pre class="mermaid">
+flowchart LR
+    A("接電話<br/><span class='mm-sub'>0935-445-671</span>"):::start --> B("問問題<br/><span class='mm-sub'>說明狀況 / 寄照片</span>"):::step
+    B --> C("報價 / 約現場<br/><span class='mm-sub'>電話報價或到府勘查</span>"):::step
+    C --> D("安排施工<br/><span class='mm-sub'>做到讓您安心</span>"):::step
+    D --> E("驗收後收款"):::done
+
+    classDef start fill:#f4a261,stroke:#0b2545,stroke-width:3px,color:#0b2545,font-weight:700;
+    classDef step fill:#ffffff,stroke:#1a73a7,stroke-width:2px,color:#0b2545;
+    classDef done fill:#0b2545,stroke:#f4a261,stroke-width:3px,color:#f4a261,font-weight:700;
+        </pre>
+      </div>
 
       <div class="process__cta">
         <a class="btn btn--primary btn--lg" href="tel:0935445671">
           <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
-          打電話問　0935-445-671
+          打電話問 (吳先生)　0935-445-671
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery" class="section">
-    <div class="container">
-      <header class="section__head">
-        <span class="section__eyebrow">PORTFOLIO</span>
-        <h2 class="section__title">工程實績</h2>
-        <p class="section__sub">每一件工程都是我們對品質的承諾　·　點圖可放大檢視</p>
-      </header>
-
-      <div class="gallery" id="galleryGrid">
-        <!-- images injected by main.js -->
       </div>
     </div>
   </section>
@@ -207,14 +203,71 @@
   <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z"/></svg>
 </a>
 
-<div class="lightbox" id="lightbox" aria-hidden="true">
-  <button class="lightbox__close" id="lightboxClose" aria-label="關閉">×</button>
-  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="上一張">‹</button>
-  <img id="lightboxImg" alt="" />
-  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="下一張">›</button>
-  <div class="lightbox__caption" id="lightboxCaption"></div>
-</div>
+<dialog class="img-modal" id="imgModal" aria-label="圖片放大檢視">
+  <button class="img-modal__close" id="imgModalClose" aria-label="關閉" type="button">×</button>
+  <figure class="img-modal__figure">
+    <img id="imgModalImg" alt="" />
+    <figcaption id="imgModalCaption"></figcaption>
+  </figure>
+</dialog>
 
+<dialog class="modal" id="serviceModal" aria-labelledby="serviceModalTitle">
+  <button class="modal__close" id="serviceModalClose" aria-label="關閉" type="button">×</button>
+  <div class="modal__inner">
+    <div class="modal__body">
+      <div class="modal__left">
+        <span class="modal__eyebrow">SERVICE DETAIL</span>
+        <h3 class="modal__title" id="serviceModalTitle"></h3>
+        <ul class="modal__list" id="serviceModalList"></ul>
+      </div>
+      <div class="modal__right">
+        <span class="modal__right__label">工程參考圖<small>　點圖可放大</small></span>
+        <div class="modal__gallery" id="serviceModalGallery"></div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="gallery-modal" id="galleryModal" aria-labelledby="galleryModalTitle">
+  <button class="modal__close" id="galleryModalClose" aria-label="關閉" type="button">×</button>
+  <div class="modal__inner">
+    <header class="gallery-modal__head">
+      <span class="modal__eyebrow">PORTFOLIO</span>
+      <h3 class="modal__title" id="galleryModalTitle">工程實績</h3>
+      <p class="gallery-modal__sub">每一件工程都是品質的承諾　·　點圖可放大檢視</p>
+    </header>
+    <div class="gallery-modal__scroll">
+      <div class="gallery-modal__grid" id="galleryModalGrid"></div>
+    </div>
+  </div>
+</dialog>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    securityLevel: 'loose',
+    theme: 'base',
+    themeVariables: {
+      fontFamily: '"Noto Sans TC", system-ui, sans-serif',
+      fontSize: '15px',
+      primaryColor: '#ffffff',
+      primaryTextColor: '#0b2545',
+      primaryBorderColor: '#1a73a7',
+      lineColor: '#f4a261',
+      secondaryColor: '#13315c',
+      tertiaryColor: '#f4a261'
+    },
+    flowchart: {
+      curve: 'basis',
+      padding: 18,
+      nodeSpacing: 50,
+      rankSpacing: 60,
+      htmlLabels: true,
+      useMaxWidth: true
+    }
+  });
+</script>
 <script src="main.js"></script>
 </body>
 </html>

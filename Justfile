@@ -8,9 +8,11 @@ default:
 install:
     mise install
 
-# 本機預覽網站 (http://localhost:8080)
-dev:
-    python3 -m http.server 8080
+# 本機預覽網站（會自動開啟瀏覽器）
+dev port="8080":
+    @echo "→ 預覽網址：http://localhost:{{port}}"
+    @( sleep 1 && ( open "http://localhost:{{port}}" 2>/dev/null || xdg-open "http://localhost:{{port}}" 2>/dev/null || true ) ) &
+    @python3 -m http.server {{port}}
 
 # 提交並推送變更 (用法: just deploy "更新文案")
 deploy message="chore: update site":
