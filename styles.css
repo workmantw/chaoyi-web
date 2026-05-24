@@ -265,6 +265,40 @@ button { font-family: inherit; cursor: pointer; }
 .section--dark .section__title { color: #fff; }
 .section__sub { color: var(--ink-2); margin-top: 12px; font-size: 16px; }
 
+/* ============ SERVICES INTRO ============ */
+.services__intro {
+  max-width: 820px;
+  margin: 0 auto 50px;
+  padding: 28px 32px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--orange);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  color: var(--ink-2);
+  font-size: 15.5px;
+  line-height: 1.9;
+}
+.services__intro p { margin-bottom: 10px; }
+.services__intro p:last-child { margin-bottom: 0; }
+.services__intro__lead {
+  font-size: 17px;
+  color: var(--ink);
+  font-weight: 500;
+}
+.services__intro strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+@media (max-width: 540px) {
+  .services__intro {
+    padding: 22px 20px;
+    font-size: 14.5px;
+    border-radius: 12px;
+  }
+  .services__intro__lead { font-size: 15.5px; }
+}
+
 /* ============ SERVICES ============ */
 .services {
   display: grid; gap: 24px;
