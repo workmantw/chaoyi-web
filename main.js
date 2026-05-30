@@ -54,6 +54,13 @@
     });
   }
 
+  const idcardImg = document.querySelector('.contact-block__avatar img');
+  if (idcardImg) {
+    idcardImg.addEventListener('click', () => {
+      openImgModal(idcardImg.src, idcardImg.alt, '朝億工程行　吳先生名片');
+    });
+  }
+
   if (imgModal) {
     imgModalClose.addEventListener('click', () => imgModal.close());
     imgModal.addEventListener('click', (e) => {
